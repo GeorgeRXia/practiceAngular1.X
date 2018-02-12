@@ -6,6 +6,12 @@ $routeProvider.when('/', {
   controller: HotelsController,
   controllerAs: 'vm'
 
-}).when('/hotel/:id')
+}).when('/hotels/:id', {
+  templateUrl: 'angular-app/hotel-display/hotels.html',
+  controller: HotelController,
+  controllerAs: 'vm'
+
+
+})
 
 }

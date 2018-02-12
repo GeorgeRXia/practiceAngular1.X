@@ -22,18 +22,24 @@
   </footer>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+<!-- importing angualr from node modules -->
   <script src="node_modules/angular/angular.js">
   </script>
   <script src="node_modules/angular-route/angular-route.js">
   </script>
-  <!-- you can do this file path because of the express.static path allows the public file to be accessed -->
+  <!-- you can do this file path because of the express.static path allows the public file to be accessed. This is also our routes-->
   <script src="angular-app/app.js">
   </script>
-  <script type="text/javascript">
+
+  <!-- controllers -->
+  <script src="angular-app/hotel-list/hotel-list-controller.js">
 
   </script>
-  <script src="angular-app/hotel-list/hotel-list-controller.js">
+  <script src="angular-app/hotel-display/hotel-display-controller.js">
+
+  </script>
+  <!-- factory -->
+  <script src="angular-app/hotel-data-factory/hotel-data-factory.js">
 
   </script>
 </body>
