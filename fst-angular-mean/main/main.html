@@ -1,0 +1,6 @@
+<!-- filters can take arguments {{ vm.name | reverse:2:"string" }} -->
+
+<h1>hello, {{ vm.name | reverse }} ?</h1>
+<ul>
+  <li ng-repeat="film in vm.films.results">{{film.title | reverse}}</li>
+</ul>

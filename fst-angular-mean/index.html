@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+.red {
+ color: red
+
+}
+  .green {
+  color: green
+
+}
+</style>
+  </head>
+  <body>
+    <div> ng-init sets a var </div>
+    <div ng-init="name = 'george1'">
+   {{name}}
+   <div ng-bind="name"></div>
+ </div>
+ <br />
+ <div> ng-model allows you to reference an input and use it's value</div>
+ {{user}}
+ <input ng-model="user">
+ <br />
+ <div> you can use change the value of of ng-init</div>
+ <div ng-init="number = 0"></div>
+ {{number}}
+<button ng-click= "number =  number + 1">+1</button>
+
+ <br />
+ <div class="">
+   you can reference an input's value using the ng-model's name
+ </div>
+ <div>Show me the paragraph</div><input type="checkbox"
+  ng-model='isChecked'>
+
+ <p ng-if="isChecked">message</p>
+ <p ng-show="isChecked">message</p>
+ <div>Guessing game</div>
+ <div ng-init="number = 5">
+
+   <input ng-model="guess">
+   <div ng-hide="guess != number">correct</div>
+   <div ng-show="guess != number">incorrect</div>
+   <div ng></div>
+   <div></div>
+ </div>
+ <div>NGCLASS</div>
+   <div ng-init="number1 = 5">
+   <input type="text" ng-model="guess2" ng-class="{red: guess2!=number1, green: guess2 == number1}">
+
+ </div>
+
+ <div> NG Repeat  </div>
+   <div ng-init="arrarys = [1,2,3,4,5,6]">
+     <ul>
+       <li ng-repeat="arrary in arrarys" ng-class="{red: $even, green: $odd}">
+        {{arrary}}
+       </li>
+     </ul>
+   </div>
+   <div> N Names index  </div>
+   <div ng-init= "names = ["smith","smith"]">
+
+     <ul>
+       <li ng-repeat="name in names track by $index" >
+        {{name}}
+       </li>
+     </ul>
+   </div>
+
+<div ng-init="names = ['smith', 'smith']">
+  <ul>
+    <li ng-repeat="name in names track by $index">{{name}}</li>
+  </ul>
+
+</div>
+<div ng-init="amount = 1250.50">
+  <p>{{amount | currency: "E"}}</p>
+</div>
+<div ng-init="amount2 = 1250.504343">
+  <p>{{-amount2 | number:1}}</p>
+</div>
+<div ng-init="string = 'helo'">
+  <p>{{string| uppercase}}</p>
+</div>
+
+<!-- <div ng-init="rebels = [
+{name: ''}
+
+
+Finsih it section 4 lesson 2
+]">
+
+</div> -->
+
+
+
+
+
+    <div ng-view>
+
+    </div>
+    <!-- ng-contoller isn't needed if you spcify it in your routes config -->
+    <!-- <div ng-controller="MyController as MyCtrl">
+      <p>hello, {{MyCtrl.name}}</p>
+    </div> -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.min.js">
+    </script>
+    <script src="app.js">
+    </script>
+    <script src="main/main-controller.js">
+    </script>
+    <script src="about/about-controller.js">
+    </script>
+    <script src="datafactory/datafactory.js">
+
+    </script>
+    <script src="filters/reverse-filter/reverse-filter.js">
+
+    </script>
+  </body>
+</html>

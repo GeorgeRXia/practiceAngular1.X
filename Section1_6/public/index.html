@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="meanhotel">
+
+<head>
+  <meta charset="utf-8">
+  <title>bob</title>
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+</head>
+<body>
+
+  <div ng-view> </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-center">
+        <a href="http:fullstacktraining.com" target="_blank">
+              <img src="./images/fb.jpg" height='26' alt="">
+            </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="node_modules/angular/angular.js">
+  </script>
+  <script src="node_modules/angular-route/angular-route.js">
+  </script>
+  <!-- you can do this file path because of the express.static path allows the public file to be accessed -->
+  <script src="angular-app/app.js">
+  </script>
+  <script type="text/javascript">
+
+  </script>
+  <script src="angular-app/hotel-list/hotel-list-controller.js">
+
+  </script>
+</body>
+
+</html>
